@@ -1,54 +1,74 @@
-# React + TypeScript + Vite
+# Mypage
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is Yurukatsu's personal website built with React + TypeScript + Vite.
 
-Currently, two official plugins are available:
+## Technologies
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- React 19.0.0
+- TypeScript
+- Vite (Build tool)
+- ESLint (Code linting)
+- GitHub Pages (Deployment)
 
-## Expanding the ESLint configuration
+## Installation
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+To install the dependencies, run:
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```bash
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Development
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+To start the development server, run:
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```bash
+npm run dev
 ```
+
+This will start a local development server at `http://localhost:5173/`.
+
+## Building
+
+To build the project for production, run:
+
+```bash
+npm run build
+```
+
+This will create a `dist` directory with the compiled assets.
+
+## Preview
+
+To preview the production build locally, run:
+
+```bash
+npm run preview
+```
+
+## Deployment
+
+This project is configured to deploy to GitHub Pages. To deploy, run:
+
+```bash
+npm run deploy
+```
+
+This will build the project and deploy it to the GitHub Pages site specified in the `homepage` field of `package.json`.
+
+## Project Structure
+
+```
+mypage/
+├── public/          # Static assets
+├── src/             # Source code
+│   ├── assets/      # Project assets (images, etc.)
+│   ├── App.tsx      # Main application component
+│   └── main.tsx     # Entry point
+├── index.html       # HTML template
+└── package.json     # Project configuration
+```
+
+## License
+
+This project is private and not licensed for public use.
